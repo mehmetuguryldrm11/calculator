@@ -57,7 +57,7 @@ ffmpeg -f alsa -i hw:0 -t 30 out.wav
 ```
 Özellikle başka bir kayıt cihazından çıktı üretmek istersek:
 ```
-ffmpeg -f alsa -i hw:0,2 -t 30 out.wav
+ffmpeg -f alsa -i hw:0,1 -t 30 out.wav
 ```
 En iyi yol, kartınızı ve varsayılan kayıt cihazınızı alsamixer aracıyla seçmektir, çünkü bazı ses kartlarında ffmpeg komut satırı aracılığıyla varsayılan girişi seçmenin karmaşık bir yolu vardır.
 # Alsamixer
