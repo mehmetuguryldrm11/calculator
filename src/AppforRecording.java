@@ -2,12 +2,12 @@ import muymuy.StreamRecorder;
 
 import org.bytedeco.ffmpeg.global.avcodec;
 import org.bytedeco.javacv.*;
-import javax.sound.sampled.*;
 
-public class AppforRecording{
+
+public class Record{
 
     public static void recordWebcamAndMicrophone(int WEBCAM_DEVICE_INDEX, int AUDIO_DEVICE_INDEX, String outputFile,
-                                                 int captureWidth, int captureHeight, int FRAME_RATE) throws org.bytedeco.javacv.FrameGrabber.Exception {
+                                                int captureWidth, int captureHeight, int FRAME_RATE) throws org.bytedeco.javacv.FrameGrabber.Exception {
         long startTime = 0;
         long videoTS = 0;
 
@@ -66,7 +66,7 @@ public class AppforRecording{
         recorder.setSampleRate(44100);
         recorder.setAudioChannels(2);
         recorder.setAudioCodec(avcodec.AV_CODEC_ID_AAC);
-        System.out.println("start recording...");
+        System.out.println("Start recording...");
 
         try {
             recorder.start();
@@ -149,7 +149,7 @@ public class AppforRecording{
 
     public static void call() throws InterruptedException, LineUnavailableException ,FrameGrabber.Exception{
         int FRAME_RATE = 50;
-        recordWebcamAndMicrophone(0,4, "test.flv",50,50,FRAME_RATE);
+        recordWebcamAndMicrophone(0,4, "muy.flv",50,50,FRAME_RATE);
     }
 
     public static void main(String[] args) throws InterruptedException, LineUnavailableException ,FrameGrabber.Exception{
