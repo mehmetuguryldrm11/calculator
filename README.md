@@ -99,8 +99,6 @@ ffmpeg -f alsa -channels 1 -sample_rate 44100 -i hw:0 -t 30 out.wav
 modprobe snd-aloop pcm_substreams=1
 ```
 
-# FFmpeg ve Alsa kullanarak canlı ses iletimi
-
 
 
 
